@@ -1,0 +1,84 @@
+<html lang="pt-nr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/assents/css/style.css">
+    <title>Controle de Gastos</title>
+</head>
+<body>
+    <main class="container">
+
+        <header class="cabecalho">
+            <img class="carteira" src="src/assents/img/carteira.png" alt="Icone de carteira">
+            <h1>Controle de Gastos</h1>
+        </header>
+
+        <section class="resumo">
+            
+            <div class="saldo">
+                <p>Saldo atual</p>
+                <h2 class="valor-saldo">R$ 0,00</h2>
+            </div>
+
+            <div class="resumo-valores">
+               
+               <div class="receita">
+                <p>Receitas</p>
+                <span class="total-receitas">R$ 0,00</span>
+                </div>
+                
+                <div class="despesas">
+                <p>Despesas</p>
+                <span class="total-despesas">R$ 0,00</span>
+                </div>
+            
+            </div>
+        </section>
+
+        <section class="nova-movimentacao">
+
+            <h2>Nova movimentação</h2>
+
+            <div class="campo-descricao">
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" placeholder="Ex: Mercado, Salário, Internet...">
+            </div>
+
+            <div class="campo-movimentacao">
+                <div class="campo-valor">
+                    <label for="valor">Valor</label>
+                    <input type="text" id="valor"
+                    placeholder="Ex: 150,00">
+                </div>
+
+                <div class="campo-tipo">
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo">
+                        <option value="despesas">Despesas</option>
+                        <option value="receita">Receita</option>
+                    </select>
+                </div>
+
+                <input class="data" type="date">
+                
+            </div>
+            
+            <button class="botao-adicionar"> + Adicionar movimentação</button>
+
+            <p class="mensagem-erro"></p>
+        </section>
+
+        <section class="historico">
+            <h2>Historico de movimentação</h2>
+
+            <ul class="lista-movimentacoes">
+
+
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="src/assents/js/script.js"></script>
+</body>
+</html>
