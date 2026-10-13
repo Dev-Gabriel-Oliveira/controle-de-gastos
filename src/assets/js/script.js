@@ -20,11 +20,11 @@ const movimentacao = JSON.parse(localStorage.getItem("movimentacao")) || []
 function adicionarMovimentacao() {
     
     const descricao = inputDescricao.value
-    const valor = Number(campoValor.value)
+    const valor = Number(campoValor.value.replace(",", "."))
     const tipo = campoTipo.value
     const data = dataAtual.value
 
-    if(descricao.trim() === "" || valor <= 0 || data === ""){
+    if(descricao.trim() === "" || isNaN(valor) || data === ""){
         mensagemErro.textContent = "Preencha os campos corretamente"
         return
     } 
