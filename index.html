@@ -1,84 +1,113 @@
-<html lang="pt-nr">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/assents/css/style.css">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+
     <title>Controle de Gastos</title>
 </head>
+ 
 <body>
-    <main class="container">
+     <div class="layout">
 
-        <header class="cabecalho">
-            <img class="carteira" src="src/assents/img/carteira.png" alt="Icone de carteira">
-            <h1>Controle de Gastos</h1>
-        </header>
-
-        <section class="resumo">
+        <aside class="sidebar">
             
-            <div class="saldo">
-                <p>Saldo atual</p>
-                <h2 class="valor-saldo">R$ 0,00</h2>
+            
+            <div class="logo">
+                <img class="img-logo" src="src/assets/img/finance-control-icon.png" alt="Finance Control">
+                <div class="logo-texto">
+                    <h2>Finance Control</h2>
+                    <p>Gestão financeira</p>
+                </div>
+            </div>
+           
+            <nav class="menu">
+                <ul>
+                    <li class="menu-item ativo">
+                        <a href="index.html">
+                            <i data-lucide="layout-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item ">
+                        <a href="pages/movimentacoes.html">
+                            <i data-lucide="arrow-left-right"></i>
+                            <span>Movimentações</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item ">
+                        <a href="pages/relatorios.html">
+                            <i data-lucide="chart-no-axes-combined"></i>
+                            <span>Relatórios</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="pages/configuracoes.html">
+                            <i data-lucide="settings"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Finance Control</p>
+                <small>Versão 1.0</small>
             </div>
 
-            <div class="resumo-valores">
+        </aside>
+
+        <main class="conteudo">
+
+            <div class="cabecalho-dashboard">
                
-               <div class="receita">
-                <p>Receitas</p>
-                <span class="total-receitas">R$ 0,00</span>
+                <button class="botao-menu-mobile">
+                <i data-lucide="menu"></i>
+            </button>
+                
+            <div class="cabecalho-texto">
+                    <h1>Dashboard</h1>
+                <p>Acompanhe a saúde financeira do seu negócio</p>
+                </div>
+
+                <div class="cabecalho-acoes">
+                    
+                    <div class="data-atual">
+                        <i data-lucide="calendar-days"></i>
+                        <span>23 novembro de 2026</span>
+                    </div>
+
+                    <button class="botao-notificacao">
+                        <i data-lucide="bell"></i>
+                    </button>
+               
                 </div>
                 
-                <div class="despesas">
-                <p>Despesas</p>
-                <span class="total-despesas">R$ 0,00</span>
-                </div>
+            </div>
+          
+            <div class="indicadores-financeiros">
             
-            </div>
-        </section>
+           </div>
 
-        <section class="nova-movimentacao">
+           <div class="graficos">
 
-            <h2>Nova movimentação</h2>
+           </div>
 
-            <div class="campo-descricao">
-                <label for="descricao">Descrição</label>
-                <input type="text" id="descricao" placeholder="Ex: Mercado, Salário, Internet...">
-            </div>
+           <div class="movimentacoes"> 
 
-            <div class="campo-movimentacao">
-                <div class="campo-valor">
-                    <label for="valor">Valor</label>
-                    <input type="text" id="valor"
-                    placeholder="Ex: 150,00">
-                </div>
+           </div>
+        </main>
 
-                <div class="campo-tipo">
-                    <label for="tipo">Tipo</label>
-                    <select id="tipo">
-                        <option value="despesas">Despesas</option>
-                        <option value="receita">Receita</option>
-                    </select>
-                </div>
-
-                <input class="data" type="date">
-                
-            </div>
-            
-            <button class="botao-adicionar"> + Adicionar movimentação</button>
-
-            <p class="mensagem-erro"></p>
-        </section>
-
-        <section class="historico">
-            <h2>Historico de movimentação</h2>
-
-            <ul class="lista-movimentacoes">
-
-
-            </ul>
-        </section>
-
-    </main>
-
-    <script src="src/assents/js/script.js"></script>
+    </div>
+ 
+    <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+    
+    <script src="src/assets/js/script.js"></script>
 </body>
 </html>

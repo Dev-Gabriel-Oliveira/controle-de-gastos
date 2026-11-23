@@ -1,172 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+.botao-menu-mobile{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor-branca);
+    color: var(--cor-sidebar);
+    cursor: pointer;
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --cor-sidebar: #172b25;
+    --cor-primaria: #185543;
+    --cor-hover: #29483d;
+    --cor-fundo: #f4f6f5;
+    --cor-branca: #ffffff;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body{
-    min-height: 100vh;
+   font-family: "Inter", sans-serif;
+   background-color:var(--cor-fundo);
+}
+
+.layout{
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #f1f1f1;
+    min-height: 100vh;
 }
 
-.container{
- width: 600px;
- background-color: white;
- padding: 30px;
- border-radius: 12px;
+.img-logo{
+    width: 40px;
+    height: 40px;
 }
 
-.cabecalho{
+.sidebar {
+    width: 260px;
+    color: white;
+    padding: 25px 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;;
+    flex-shrink: 0;
+    background-color: var(--cor-sidebar);
+}
+
+.menu{
+    margin-top: 25px;
+}
+
+.logo{
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 30px;
 }
 
-.cabecalho img{
-    width: 50px;
-}
 
-.resumo{
-    margin-top: 30px;
-}
-
-.saldo{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.resumo-valores{
+.logo-texto {
     display: flex;
-    gap: 20px;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 3px;
 }
 
-.receita,.despesas{
-    flex: 1;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.logo-texto h2 {
+    font-size: 18px;
+    font-weight: 700 ;
 }
 
-.receita{
-    background-color: #15cc3d;
+.logo-texto p {
+    font-size: 13px;
 }
-
-.despesas{
-    background-color: #f70101;
-}
-
-.nova-movimentacao{
-    margin-top: 30px;
-}
-
-.campo-descricao{
-    margin-top: 15px;
-}
-
-.campo-descricao input{
-    width: 100%;
-}
-
-.campo-movimentacao{
+/* Organização Menu */
+.menu ul{
     display: flex;
-    gap: 15px;
-    margin-top: 15px;
-    align-items: end;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.campo-valor,.campo-tipo{
-    flex: 1;
-}
 
-.campo-valor input,.campo-tipo select{
-    width: 100%;
-}
-
-.campo-descricao input,.campo-valor input,.campo-tipo select{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.campo-descricao,.campo-valor,.campo-tipo{
-    margin-top: 10px;
-}
-
-.botao-adicionar{
-    width: 100%;
-    margin-top: 10px;
-    padding: 12px;
-    
-    border: none;
-    border-radius: 5px;
-
-    background-color: #2f5bea;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.historico{
-    margin-top: 30px;
-}
-
-.historico h2{
-    margin-bottom: 15px;
-}
-
-.lista-movimentacoes{
-    list-style: none;
-}
-
-.movimentacao{
+/* Link ocupando todo o espaco */
+.menu-item a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
+    width: 100%;
+    gap: 12px;
     padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.receita-historico{
-background-color: #15cc3d;
-}
-
-.despesa-historico{
-background-color: #f70101;
-}
-
-.valor-receita{
-    color: green;
-}
-
-.valor-despesas{
-    color: red;
-}
-
-.data{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.data-movimentacao{
-    font-size: 15px;
-    font-family:sans-serif;
-    font-weight: 300;
-}
-
-.botao-excluir{
-    color: white;
-    background-color: red;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
+}
+
+.menu-item i {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.8;
+}
+/* Item selecionado */
+.menu-item.ativo{
+    color: #f4f6f5;
+    background-color: var(--cor-primaria);
+}
+
+/* Efeito ao passar o mouse */
+.menu-item:not(.ativo):hover {
+    background-color: var(--cor-hover);
+}
+
+
+/* Estilo */
+.menu-item{
+    list-style: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Rodapé sempre embaixo */
+.sidebar-footer {
+    margin-top: auto;
+}
+
+/* Dashboard */
+
+.conteudo {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+.cabecalho-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-texto h1{
+    font-size: 26px;
+    color: #172b25;
+}
+
+.cabecalho-texto p {
+    font-size: 14px;
+    color: #718078;
+    margin-top: 6px;
+}
+
+.cabecalho-acoes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.data-atual{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #718078;
+    font-size: 14px;
+}
+
+.botao-notificacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor-branca);
+    color: var(--cor-sidebar);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-notificacao:hover{
+    background-color: #e8eeeb;
+}
+
+@media (max-width:768px){
+
+    .botao-menu-mobile{
+        display: flex;
+    }
+
+    
+    .sidebar {
+        display: none;
+    }
+
+    .cabecalho-dashboard{
+        justify-content: flex-start;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .cabecalho-texto h1{
+        font-size: 21px;
+        min-width: 0;
+        overflow-wrap: break-word;
+    }
+
+    .cabecalho-texto p {
+        font-size: 11px;
+    }
+
+    .cabecalho-acoes{
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .data-atual{
+        display: none;
+    }
+
+    .botao-notificacao{
+        width: 38px;
+        height: 38px;
+    }
 }
