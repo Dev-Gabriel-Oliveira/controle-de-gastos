@@ -21,10 +21,10 @@
                 </div>
             </div>
            
-            <nav class="menu">
+            <nav class="menu" aria-label="Navegação principal">
                 <ul>
                     <li class="menu-item ativo">
-                        <a href="index.html">
+                        <a href="index.html" aria-current="pafe">
                             <i data-lucide="layout-dashboard"></i>
                             <span>Dashboard</span>
                         </a>
@@ -64,7 +64,7 @@
 
             <div class="cabecalho-dashboard">
                
-                <button class="botao-menu-mobile">
+                <button type="button" class="botao-menu-mobile">
                 <i data-lucide="menu"></i>
             </button>
                 
@@ -89,11 +89,79 @@
             </div>
           
             <div class="indicadores-financeiros">
-            
-           </div>
+               
+                <div class="card-indicador">
+                    
+                   <div class="indicador-topo">
+                    <h2>Saldo Total</h2>
+                    <i data-lucide="wallet-minimal"></i>
+                   </div>
+
+                   <h3 class="indicador-valor">R$ 24.850,00</h3>
+
+                   <p>Saldo disponível</p>
+
+                   
+                
+                </div>
+
+                <div class="card-indicador positivo">
+                    
+                    <div class="indicador-topo positivo ">
+                     <h2>Receitas</h2>
+                    <i data-lucide="trending-up"></i>
+                   </div>
+                   
+                   <h3 class="indicador-valor ">R$ 18.500,00</h3>
+                   <p>Entradas do período</p>
+           
+                </div>
+
+                <div class="card-indicador negativo">
+                    
+                    <div class="indicador-topo">
+                     <h2>Despesas</h2>
+                    <i data-lucide="trending-down"></i>
+                   </div>
+                   
+                   <h3 class="indicador-valor ">R$ 8.250,00</h3>
+                   <p>Saídas do período</p>
+           
+                </div>
+
+                <div class="card-indicador">
+                    
+                    <div class="indicador-topo">
+                     <h2>Lucro líquido</h2>
+                    <i data-lucide="chart-no-axes-combined"></i>
+                   </div>
+                   
+                   <h3 class="indicador-valor">R$ 10.250,00</h3>
+                   <p >Margem de 55,4%</p>
+           
+                </div>
+                    
+            </div>
 
            <div class="graficos">
+                <div class="card-grafico">
+                    <h2>Fluxo de caixa</h2>
+                    <p>Acompanhe a evolução das receitas e despesas ao longo do tempo.</p>
+                    
+                    <div class="area-grafico">
+                        <canvas id="graficoFluxo"></canvas>
+                    </div>
 
+                </div>
+
+                <div class="card-grafico">
+                    <h2>Receitas x Despesas</h2>
+                    <p>Compare suas entradas e saídas financeiras no período selecionado.</p>
+
+                    <div class="area-grafico">
+
+                    </div>
+                </div>
            </div>
 
            <div class="movimentacoes"> 
@@ -104,10 +172,14 @@
     </div>
  
     <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
     lucide.createIcons();
-  </script>
+    </script>
     
     <script src="src/assets/js/script.js"></script>
+    <script src="src/assets/js/grarficos.js"></script>
+    
+
 </body>
 </html>
