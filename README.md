@@ -1,39 +1,129 @@
-# Controle de Gastos
+# Finance Control 💰
 
-Aplicação web para registrar receitas e despesas, acompanhar o saldo e consultar o histórico de movimentações. Projeto feito para praticar JavaScript na prática, depois de montar o HTML e estilizar com CSS.
+**Finance Control** é um projeto de dashboard financeiro desenvolvido para facilitar o acompanhamento e a visualização da saúde financeira de um negócio.
 
-## 📋 Funcionalidades
-- Cadastro de movimentações com descrição, valor, tipo (receita ou despesa) e data
-- Validação dos campos, com mensagem de erro quando o preenchimento está incorreto
-- Resumo automático com saldo atual, total de receitas e total de despesas
-- Histórico de movimentações, com receitas e despesas diferenciadas
-- Exclusão de movimentações, com o resumo atualizado na hora
-- Dados salvos no navegador (`localStorage`), então continuam ao recarregar a página
-- Valores formatados em reais (R$) e datas no formato dd/mm/aaaa
+A proposta é oferecer uma interface moderna, intuitiva e responsiva, reunindo indicadores financeiros e gráficos em um único ambiente.
 
-## 🛠️ Tecnologias usadas
-- HTML5: estrutura da página
-- CSS3: estilização e layout
-- JavaScript: lógica, manipulação do DOM e armazenamento local
+## 🖥️ Preview
 
-## ▶️ Como rodar o projeto
+Ao Final do Projeto será adicionado.
+
+## ✨ Funcionalidades
+
+- Dashboard com indicadores financeiros.
+- Visualização de saldo total, receitas, despesas e lucro líquido.
+- Gráfico de fluxo de caixa com comparação entre receitas e despesas.
+- Gráficos interativos utilizando Chart.js.
+- Formatação de valores monetários em Real brasileiro (BRL).
+- Interface responsiva para diferentes tamanhos de tela.
+- Navegação entre as seções do sistema.
+
+## 🚀 Tecnologias
+
+### Atualmente utilizadas
+- **HTML5** — estrutura da aplicação.
+- **CSS3** — estilização e responsividade.
+- **JavaScript** — lógica e interatividade.
+- **Chart.js** — construção dos gráficos.
+- **Lucide** — biblioteca de ícones.
+
+### Tecnologias planejadas
+- **TypeScript** — tipagem e organização do código.
+- **Node.js** — desenvolvimento do backend.
+- **PostgreSQL** — gerenciamento do banco de dados.
+- **React** — evolução da interface frontend.
+- **APIs REST** — comunicação entre frontend e backend.
+
+## 🗺️ Roadmap do projeto
+
+O Finance Control está em desenvolvimento e será evoluído gradualmente de uma aplicação frontend para um sistema Full Stack.
+
+- [x] Construção da interface inicial.
+- [x] Dashboard com indicadores financeiros.
+- [x] Implementação inicial dos gráficos com Chart.js.
+- [x] Responsividade do dashboard.
+- [ ] Evolução do código JavaScript para TypeScript.
+- [ ] Desenvolvimento do backend com Node.js.
+- [ ] Criação de APIs para gerenciamento financeiro.
+- [ ] Integração com PostgreSQL.
+- [ ] Evolução do frontend com React.
+- [ ] Implementação de autenticação de usuários.
+- [ ] Persistência e gerenciamento completo dos dados financeiros.
+
+## 🎯 Objetivo
+
+Construir uma aplicação de gestão financeira que permita acompanhar receitas, despesas, saldo e resultados de um negócio.
+
+O projeto também faz parte da minha jornada de aprendizado em desenvolvimento Full Stack, sendo desenvolvido por etapas, aplicando na prática conceitos de frontend, backend, banco de dados e arquitetura de software.
+
+## 📁 Estrutura do projeto
+
+```text
+Controle-De-Gastos/
+│
+├── index.html
+│
+├── pages/
+│   ├── movimentacoes.html
+│   ├── relatorios.html
+│   └── configuracoes.html
+│
+├── src/
+│   └── assets/
+│       ├── css/
+│       │   └── style.css
+│       │
+│       ├── js/
+│       │   ├── script.js
+│       │   └── graficos.js
+│       │
+│       └── img/
+│
+└── README.md
+```
+
+## ⚙️ Como executar o projeto
+
+Atualmente, o projeto utiliza HTML, CSS e JavaScript puro, sem necessidade de instalação de dependências.
+
 1. Clone o repositório:
+
 ```bash
-   git clone https://github.com/Dev-Gabriel-Oliveira/controle-de-gastos
+git clone URL_DO_REPOSITORIO
 ```
-2. Entre na pasta:
+
+2. Entre na pasta do projeto:
+
 ```bash
-   cd controle-de-gastos
+cd Controle-De-Gastos
 ```
+
 3. Abra o arquivo `index.html` no navegador.
 
-## 📚 O que aprendi
-- Selecionar e criar elementos com o DOM (`querySelector`, `createElement`, `appendChild`)
-- Trabalhar com eventos de clique
-- Organizar o código em funções
-- Usar arrays e `forEach` para calcular totais
-- Salvar e recuperar dados com `localStorage` e `JSON`
-- Formatar moeda com `Intl.NumberFormat`
+Você também pode utilizar a extensão **Live Server** do Visual Studio Code para executar o projeto durante o desenvolvimento.
 
-## 👤 Autor
-**Gabriel Oliveira
+## 🎯 Objetivo
+
+Este projeto faz parte da minha jornada de desenvolvimento Full Stack e tem como objetivo aplicar conhecimentos de desenvolvimento web na construção de uma aplicação prática.
+
+Além de desenvolver a interface, a proposta é evoluir gradualmente o sistema, adicionando funcionalidades e novas tecnologias.
+
+## 🔮 Próximos passos
+
+- Desenvolver o gerenciamento de movimentações financeiras.
+- Implementar filtros por período.
+- Criar relatórios financeiros.
+- Implementar persistência de dados.
+- Desenvolver uma API para integração com o sistema.
+- Integrar banco de dados.
+- Evoluir a aplicação para uma arquitetura Full Stack.
+
+## 👨‍💻 Desenvolvedor
+
+Desenvolvido por **Gabriel Oliveira**.
+
+[GitHub](https://github.com/Dev-Gabriel-Oliveira)
+
+---
+
+*Projeto em desenvolvimento.*
