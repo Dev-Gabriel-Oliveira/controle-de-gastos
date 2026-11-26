@@ -24,14 +24,22 @@ body{
    background-color:var(--cor-fundo);
 }
 
+.positivo{
+    color: green;
+}
+
+.negativo{
+    color: red;
+}
+
 .layout{
     display: flex;
     min-height: 100vh;
 }
 
 .img-logo{
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
 }
 .sidebar {
     width: 260px;
@@ -255,6 +263,7 @@ body{
     border-radius: 12px;
     padding: 20px;
     min-height: 320px;
+    min-width: 0;
     box-shadow: 0 2px 10px rgba(23, 43, 37, 0.06);
 }
 
@@ -274,21 +283,147 @@ body{
     position: relative;
     height: 250px;
     width: 100%;
+    min-width: 0;
 }
+
+.area-grafico canvas {
+    max-width: 100%;
+}
+
+/* resumo financeiro */
+
+.resumo-financeiro{
+    background-color: var(--cor-branca);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    min-width: 0;
+}
+
+
+.cabecalho-resumo h2{
+     font-size: 26px;
+    color: #172b25;
+}
+
+.cabecalho-resumo p {
+     font-size: 14px;
+    color: #718078;
+    margin-top: 6px;
+}
+
+.resumo-financeiro{
+    margin-top: 25px;
+    min-width: 0;
+}
+
+.resumo-cards{
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+}
+
+/* Ultimas movimentações --------------------------------------*/
+
+.container-movimentacoes{
+    background-color: var(--cor-branca);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    min-width: 0;
+}
+
+.cabecalho-movimentacoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-movimentacoes a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.cabecalho-movimentacoes h2{
+  font-size: 26px;
+    color: #172b25;
+}
+
+.cabecalho-movimentacoes p {
+     font-size: 14px;
+    color: #718078;
+    margin-top: 6px;
+}
+
+.cabecalho-movimentacoes a {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.ultimas-movimentacoes{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.item-movimentacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:18px 0;
+    border-bottom: 1px solid #edf0ee;
+}
+
+.item-movimentacao:last-child {
+    border-bottom: none;
+}
+
+.descricao-movimentacoes{
+    font-size: 15px;
+    font-weight: 600;
+    color: #172b25;
+    margin-bottom: 5px;
+}
+
+.detalhes-movimentacao{
+    font-size: 13px;
+    color:  #718078;
+}
+
+.valor-movimentacao p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 
 /* mobile resposive */
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
    .sidebar{
     display: none;
    }
+
+   .resumo-financeiro{
+   padding: 25px;
+   }
+
+   .resumo-cards{
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
 
     .botao-menu-mobile{
         display: flex;
     }
 
+    .conteudo{
+        padding: 25px;
+    }
+
     .indicadores-financeiros{
-        grid-template-columns: repeat(2. minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0,1fr));
     }
 
     .graficos{
@@ -318,11 +453,19 @@ body{
         min-width: 0;
     }
 
+    .resumo-financeiro{
+    padding: 25px;
+    }
+
     .cabecalho-texto h1{
         font-size: 21px;
         overflow-wrap: break-word;
     }
 
+    .indicadores-financeiros{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .cabecalho-texto p {
         font-size: 11px;
     }
@@ -343,4 +486,37 @@ body{
         grid-template-columns: 1fr;
     }
 
+    .resumo-cards{
+    grid-template-columns: 1fr;
+    }
+
+    .cabecalho-movimentacoes{
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .cabecalho-movimentacoes h2 {
+        font-size: 21px;
+    }
+
+    .cabecalho-movimentacoes p {
+        font-size: 12px;
+    }
+
+    .cabecalho-movimentacoes a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .item-movimentacao{
+        gap: 12px;
+    }
+
+    .informacoes-movimentacao{
+        min-width: 0;
+    }
+
+    .valor-movimentacao{
+        flex-shrink: 0;
+    }
 }

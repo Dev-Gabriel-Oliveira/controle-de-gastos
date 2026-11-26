@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/style.css">
-
-    <title>Controle de Gastos</title>
+    <link rel="icon" href="src/assets/img/Ícone V Neon de Crescimento_001.ico">
+    <title>Vertex</title>
 </head>
  
 <body>
@@ -14,9 +14,9 @@
             
             
             <div class="logo">
-                <img class="img-logo" src="src/assets/img/finance-control-icon.png" alt="Finance Control">
+                <img class="img-logo" src="src/assets/img/Ícone V Neon de Crescimento_001.ico" alt="Finance Control">
                 <div class="logo-texto">
-                    <h2>Finance Control</h2>
+                    <h2>Vertex</h2>
                     <p>Gestão financeira</p>
                 </div>
             </div>
@@ -54,7 +54,7 @@
             </nav>
 
             <div class="sidebar-footer">
-                <p>Finance Control</p>
+                <p>Vertex</p>
                 <small>Versão 1.0</small>
             </div>
 
@@ -66,12 +66,12 @@
                
                 <button type="button" class="botao-menu-mobile">
                 <i data-lucide="menu"></i>
-            </button>
+             </button>
                 
-            <div class="cabecalho-texto">
+             <div class="cabecalho-texto">
                     <h1>Dashboard</h1>
                 <p>Acompanhe a saúde financeira do seu negócio</p>
-                </div>
+             </div>
 
                 <div class="cabecalho-acoes">
                     
@@ -101,8 +101,6 @@
 
                    <p>Saldo disponível</p>
 
-                   
-                
                 </div>
 
                 <div class="card-indicador positivo">
@@ -159,14 +157,145 @@
                     <p>Compare suas entradas e saídas financeiras no período selecionado.</p>
 
                     <div class="area-grafico">
-
+                        <canvas id="graficoAnalise"></canvas>
                     </div>
                 </div>
            </div>
 
-           <div class="movimentacoes"> 
+           <section class="resumo-financeiro">
+
+            <div class="cabecalho-resumo">
+                <h2>Resumo Financeiro</h2>
+                <p>Uma visão geral do desempenho financeiro do negócio.</p>
+            </div>
+
+            <div class="indicadores-financeiros resumo-cards">
+
+                <div class="card-indicador">
+
+                    <div class="indicador-topo">
+                        <h2>Total de movimentações</h2>
+                        <i data-lucide="arrow-left-right"></i>
+                    </div>
+                    
+                    <h3 class="indicador-valor">48</h3>
+                    <p>Registro neste mês</p>
+
+                </div>
+
+                <div class="card-indicador negativo">
+                    
+                    <div class="indicador-topo">
+                        <h2>Maior despesa</h2>
+                        <i data-lucide="trending-down"></i>
+                    </div>
+                   
+                    <h3 class="indicador-valor">R$ 2.000,00</h3>
+                    <p>Categoria: Aluguel</p>
+                   
+                
+                </div>
+
+                <div class="card-indicador positivo">
+                    
+                    <div class="indicador-topo">
+                        <h2>Maior Receita</h2>
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    
+                    <h3 class="indicador-valor">R$ 8.500,00</h3>
+                    <p>Categoria: Vendas</p>
+                    
+                
+                </div>
+
+                <div class="card-indicador positivo">
+                    
+                    <div class="indicador-topo">
+                        <h2>Desempenho mensal</h2>
+                        <i data-lucide="chart-no-axes-combined"></i>
+                    </div>
+                    
+                    <h3 class="indicador-valor">+12,5%</h3>
+                    <p>Em relação ao mês anterior</p>
+                    
+                </div>
+
+            </div>
+
+           </section>
+
+           <div class="container-movimentacoes"> 
+                 
+                <div class="cabecalho-movimentacoes">
+                    
+                        <div>
+                           <h2>Movimentações</h2>
+                            <p>Últimas movimentações.</p>
+                        </div>
+                    
+                     <a href="pages/movimentacoes.html">Ver todas <i data-lucide="arrow-right"></i></a>
+                </div>
+                    
+                
+                <div class="ultimas-movimentacao">
+                    
+                    <div class="item-movimentacao">
+
+                        <div class="informacoes-movimentacao">
+                            <p class="descricao-movimentacoes">Venda de produtos</p>
+                            <span class="detalhes-movimentacao">Vendas · 24/11/2026</span>
+                        </div>
+
+                        <div class="valor-movimentacao">
+                            <p class="positivo">+ R$ 850,00</p>
+                        </div>
+
+                    </div>
+
+                    <div class="item-movimentacao">
+
+                        <div class="informacoes-movimentacao">
+                            <p class="descricao-movimentacoes">Conta de energia</p>
+                            <span class="detalhes-movimentacao">Contas · 23/11/2026</span>
+                        </div>
+
+                        <div class="valor-movimentacao">
+                            <p class="negativo">- R$ 320,00</p>
+                        </div>
+
+                    </div>
+
+                    <div class="item-movimentacao">
+
+                        <div class="informacoes-movimentacao">
+                            <p class="descricao-movimentacoes">Pagamento de cliente</p>
+                            <span class="detalhes-movimentacao">Vendas · 22/11/2026</span>
+                        </div>
+
+                        <div class="valor-movimentacao">
+                            <p class="positivo">+ R$ 1.200,00</p>
+                        </div>
+
+                    </div>
+
+                    <div class="item-movimentacao">
+
+                        <div class="informacoes-movimentacao">
+                            <p class="descricao-movimentacoes">Compra de materiais</p>
+                            <span class="detalhes-movimentacao">Fornecedores · 21/11/2026</span>
+                        </div>
+
+                        <div class="valor-movimentacao">
+                            <p class="negativo">- R$ 450,00</p>
+                        </div>
+
+                    </div>
+                   
+                </div>
 
            </div>
+        
         </main>
 
     </div>
