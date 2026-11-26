@@ -1,6 +1,6 @@
-# Finance Control 💰
+# Vetor 💰
 
-**Finance Control** é um projeto de dashboard financeiro desenvolvido para facilitar o acompanhamento e a visualização da saúde financeira de um negócio.
+**Vetor** é um projeto de dashboard financeiro desenvolvido para facilitar o acompanhamento e a visualização da saúde financeira de um negócio.
 
 A proposta é oferecer uma interface moderna, intuitiva e responsiva, reunindo indicadores financeiros e gráficos em um único ambiente.
 

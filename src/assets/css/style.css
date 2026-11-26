@@ -321,6 +321,10 @@ body{
     grid-template-columns: repeat(4, minmax(0, 1fr))
 }
 
+.card-indicador.resumo{
+    box-shadow:  0 2px 10px rgba(23, 43, 37, 0.15);
+}
+
 /* Ultimas movimentações --------------------------------------*/
 
 .container-movimentacoes{
