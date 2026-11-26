@@ -141,6 +141,12 @@
     box-shadow: 0 2px 10px rgba(23, 43, 37, 0.15);
 }
 
+.tabela-movimentacoes{
+    width: 100%;
+    overflow-x: auto;
+    min-width: 0;
+}
+
 .cabecalho-movimentacao, .linha-movimentacao{
     display: grid;
     grid-template-columns: 120px 2fr 1fr 110px 130px 90px;
@@ -172,7 +178,7 @@
 
 .linha-movimentacao{
     border: 1px solid #edf0ee;
-    font-family: 13px;
+    font-size: 15px;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -271,11 +277,12 @@
     border-top: 1px solid #edf0ee;
 }
 
-.contatador-mmovimentacoes {
+.contador-mmovimentacoes {
     font-size: 12px;
+    
 }
 
-.contatador-mmovimentacoes{
+.contatador-mmovimentacoes strong{
     font-weight: 600;
 }
 
@@ -306,3 +313,109 @@
     color: white;
 }
 
+
+/* resposividade */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .botao-menu-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .indicadores-movimentacoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .barra-filtros {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .movimentacoes-cabecalho{
+        gap: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .movimentacoes-cabecalho {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cabecalho-texto h1 {
+        font-size: 22px;
+    }
+
+    .cabecalho-texto p {
+        font-size: 13px;
+    }
+
+    .butao-nova-movimentacao {
+        width: auto;
+        padding: 0 18px;
+    }
+
+    .indicadores-movimentacoes {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .barra-filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .movimentacoes-filtros input {
+        font-size: 15px;
+        min-width: 0;
+    }
+
+    .cabecalho-movimentacao,
+    .linha-movimentacao {
+        min-width: 850px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .titulo-pagina {
+        gap: 7px;
+    }
+
+    .titulo-pagina i {
+        width: 20px;
+    }
+
+    .cabecalho-texto h1 {
+        font-size: 19px;
+    }
+
+    .butao-nova-movimentacao {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .card-indicador {
+        padding: 15px;
+    }
+
+    .filtro {
+        padding: 14px;
+    }
+
+    .rodape-movimentacao {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .paginacao {
+        gap: 4px;
+    }
+
+}

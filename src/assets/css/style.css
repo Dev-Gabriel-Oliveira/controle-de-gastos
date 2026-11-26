@@ -161,6 +161,12 @@ body{
     margin-top: 6px;
 }
 
+.titulo-dashboard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .cabecalho-acoes{
     display: flex;
     align-items: center;
