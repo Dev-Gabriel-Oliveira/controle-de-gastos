@@ -71,13 +71,17 @@ Controle-De-Gastos/
 ├── src/
 │   └── assets/
 │       ├── css/
-│       │   └── style.css
+│       │   ├──style.css
+│       │   ├──movimentacoes.css
+│       │   └──relatorios.css
 │       │
 │       ├── js/
 │       │   ├── script.js
-│       │   └── graficos.js
+│       │   ├──graficos.js
+│       │   └──relatorios.js
 │       │
 │       └── img/
+│            └── logo.ico
 │
 └── README.md
 ```
