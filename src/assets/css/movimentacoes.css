@@ -1,18 +1,3 @@
-:root {
-    --cor-sidebar: #172b25;
-    --cor-primaria: #185543;
-    --cor-hover: #29483d;
-    --cor-fundo: #f4f6f5;
-    --cor-branca: #ffffff;
-    --categoria-azul: #3B82F6;
-    --categoria-roxo: #8B5CF6;
-    --categoria-verde: #22C55E;
-    --categoria-amarelo: #FACC15;
-    --categoria-vermelho: #EF4444;
-    --categoria-laranja: #F97316;
-    --categoria-rosa: #EC4899;
-}
-
 .movimentacoes-cabecalho{
     display: flex;
     justify-content: space-between;
@@ -36,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
+    padding: 0 20px;
     height: 42px;
     border: none;
     border-radius: 14px;
@@ -97,12 +82,20 @@
 }
 
 .filtro select {
+    flex: 1;
     appearance: none;
     -webkit-appearance: none;
     border: none;
     outline: none;
     background: transparent;
     cursor: pointer;
+}
+
+.seta.select{
+    width: 18px;
+    height: 18px;
+    color: #719078;
+    pointer-events: none;
 }
 
 .pesquisa {
@@ -217,13 +210,13 @@
 
 .tipo.despesa {
     background: #ffe9ea;
-    color: #e63946;
+    color: var(--cor-despesa);
     font-weight: 600;
 }
 
 .tipo.receita {
     background: #e3f6ec;
-    color: #16a34a;
+    color: var(--cor-receita);
 }
 
 .valor {
@@ -236,7 +229,7 @@
 }
 
 .valor.receita {
-    color: #22c55e;
+    color: var(--cor-receita);
 }
 
 .acoes-movimentacao {
@@ -260,7 +253,13 @@
 }
 
 .acoes-movimentacao button:hover {
-    background: #ffffff;
+    background: #e3f6ec;
+    color: var(--cor-primaria);
+}
+
+.acoes-movimentacao button:last-child:hover {
+    background: #ffe9ea;
+    color: #e63946;
 }
 
 .acoes-movimentacao i {
@@ -277,12 +276,12 @@
     border-top: 1px solid #edf0ee;
 }
 
-.contador-mmovimentacoes {
+.contador-movimentacoes {
     font-size: 12px;
     
 }
 
-.contatador-mmovimentacoes strong{
+.contatador-movimentacoes strong{
     font-weight: 600;
 }
 

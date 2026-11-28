@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/assets/css/style.css">
+    <link rel="icon" href="../src/assets/img/logo.ico">
+    <link rel="stylesheet" href="../src/assets/css/relatorios.css">
+    <title>Relatórios</title>
+</head>
+<body>
+    
+    <div class="layout">
+
+        <aside class="sidebar">
+            
+            
+            <div class="logo">
+                <img class="img-logo" src="../src/assets/img/logo.ico" alt="Vetor">
+                <div class="logo-texto">
+                    <h2>Vetor</h2>
+                    <p>Gestão financeira</p>
+                </div>
+            </div>
+           
+            <nav class="menu" aria-label="Navegação principal">
+                <ul>
+                    <li class="menu-item">
+                        <a href="../index.html" >
+                            <i data-lucide="layout-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item ">
+                        <a href="movimentacoes.html">
+                            <i data-lucide="arrow-left-right"></i>
+                            <span>Movimentações</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item ativo" aria-current="page">
+                        <a href="relatorios.html">
+                            <i data-lucide="chart-no-axes-combined"></i>
+                            <span>Relatórios</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="configuracoes.html">
+                            <i data-lucide="settings"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Vetor</p>
+                <small>Versão 1.0</small>
+            </div>
+
+        </aside>
+
+        <main class="conteudo">
+
+            <div class="cabecalho-dashboard">
+               
+                <button type="button" class="botao-menu-mobile">
+                    <i data-lucide="menu"></i>
+                </button>
+                
+                <div class="cabecalho-texto">
+
+                    <div class="titulo-dashboard">
+                        <i data-lucide="chart-no-axes-combined"></i>
+                    <h1>Relatórios</h1>
+                
+                    </div>
+                    <p>Acompanhe seus gastos e visualize seu desempenho financeiro.</p>
+                
+                </div>
+
+                <div class="periodo-select">
+                    
+                    <i data-lucide="calendar-days"></i>
+                        
+                        <select name="data" id="data">
+                            <option value="">Período</option>
+                            <option value="hoje">Hoje</option>
+                            <option value="semana">Esta semana</option>
+                            <option value="mes-atual">Este mês</option>
+                            <option value="mes-anterior">Mês anterior</option>
+                            <option value="ano-atual">Este ano</option>
+                            <option value="ano-anterior">Ano anterior</option>
+                            <option value="personalizado">Personalizado</option>
+                        </select>
+                        <i data-lucide="chevron-down" class="seta-select"></i>
+      
+                </div>
+                
+            </div>
+
+            <div class="indicadores-financeiros">
+               
+                <div class="card-relatorios">
+                    
+                   <div class="indicador-topo ">
+                    <h2>Total Entradas</h2>
+                    <i data-lucide="wallet-minimal"></i>
+                   </div>
+
+                   <h3 class="indicador-valor">R$ 4.850,00</h3>
+
+                   <div class="relatorio-porcentagem">
+                        <i data-lucide="arrow-up" class="positivo"></i>
+                        <p>+12%</p>
+                   </div>
+                   
+
+                </div>
+
+                <div class="card-relatorios">
+                    
+                    <div class="indicador-topo">
+                     <h2>Total Saídas</h2>
+                    <i data-lucide="circle-minus"></i>
+                   </div>
+                   
+                   <h3 class="indicador-valor ">R$ 3.210,00</h3>
+
+                   <div class="relatorio-porcentagem">
+                        <i data-lucide="arrow-up" class="negativo"></i>
+                        <p class=>+8%</p>
+                   </div>
+                   
+                   
+           
+                </div>
+
+                <div class="card-relatorios">
+                    
+                    <div class="indicador-topo">
+                     <h2>Saldo do Período</h2>
+                    <i data-lucide="chart-no-axes-column"></i>
+                   </div>
+                   
+                   <h3 class="indicador-valor ">R$ 1.640,00</h3>
+           
+                </div>
+
+                <div class="card-relatorios">
+                    
+                    <div class="indicador-topo">
+                     <h2>Variação vs. Período Anterior</h2>
+                    <i data-lucide="chart-no-axes-combined"></i>
+                   </div>
+                   
+                   <div class="relatorio-porcentagem">
+                        <i data-lucide="arrow-up" class="positivo"></i>
+                         <p class="porcentagem">+15%</p>
+                   </div>
+                   
+           
+                </div>
+                    
+            </div>
+
+            <div class="relatorios-graficos">
+                
+                <section class="card-relatorios">
+
+                    <div class="card-relatorios-topo">
+                        <div class="titulo-card">
+                            <i data-lucide="chart-column"></i>
+                            <h2>Resumo financeiro</h2>
+                        </div>
+
+                        <div class="legenda">
+                            <span class="legenda-item"><i class="bolinha entradas"></i>Entradas</span>
+                            <span class="legenda-item"><i class="bolinha saidas"></i>Saídas</span>
+                        </div>
+                    </div>
+
+                    <div class="area-grafico">
+                        <canvas id="graficoResumo"></canvas>
+                    </div>
+                </section>
+
+                <section class="card-relatorios">
+                    <div class="card-relatorios-topo">
+                        <div class="titulo-card">
+                            <i data-lucide="chart-pie"></i>
+                            <h2>Por Categoria</h2>
+                        </div> 
+                    </div>
+
+                    <div class="categoria-conteudo">
+                        <div class="area-rosca">
+                            <canvas id="graficoCategoria"></canvas>
+                            <div class="rosca-centro">
+                                <strong>R$ 3.210,00</strong>
+                                <span>Total de Saídas</span>
+                            </div>
+                        </div>
+
+                        <ul class="lista-categoria">
+                            <li><i class="bolinha cat-1"></i> <span>Alimentação</span> <b>R$ 950,00</b> <em>30%</em></li>
+                            <li><i class="bolinha cat-2"></i> <span>Transporte</span> <b>R$ 640,00</b> <em>20%</em></li>
+                            <li><i class="bolinha cat-3"></i> <span>Lazer</span> <b>R$ 610,00</b> <em>19%</em></li>
+                            <li><i class="bolinha cat-4"></i> <span>Moradia</span> <b>R$ 580,00</b> <em>18%</em></li>
+                            <li><i class="bolinha cat-5"></i> <span>Outros</span> <b>R$ 430,00</b><em>13%</em></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card-relatorios">
+                    <div class="card-relatorios-topo">
+                        <div class="titulo-card">
+                            <i data-lucide="trophy"></i>
+                            <h2>Suas Maiores Despesas</h2>
+                        </div>
+                    </div>
+
+                    <ul class="ranking">
+                        <li>
+                            <span class="raking-icone"><i data-lucide="utensils"></i></span>
+                            <span class="ranking-nome">Alimentação</span>
+                            <div class="barra"><div class="barra-preenchida" style="width: 30%;"></div> </div>
+                            <b>R$ 950,00</b>
+                            <em>30%</em>
+                        </li>
+                        <li>
+                            <span class="raking-icone"><i data-lucide="car"></i></span>
+                            <span class="ranking-nome">Transporte</span>
+                            <div class="barra"><div class="barra-preenchida" style="width: 20%;"></div> </div>
+                            <b>R$ 640,00</b>
+                            <em>20%</em>
+                        </li>
+                        <li>
+                            <span class="raking-icone"><i data-lucide="gamepad-2"></i></span>
+                            <span class="ranking-nome">Lazer</span>
+                            <div class="barra"><div class="barra-preenchida" style="width: 19%;"></div> </div>
+                            <b>R$ 610,00</b>
+                            <em>19%</em>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="card-relatorios">
+                    <div class="card-relatorios-topo">
+                        <div class="titulo-card">
+                            <i data-lucide="calendar-days"></i>
+                            <h2>Comparativo Mensal</h2>
+                        </div>
+                        <div class="legenda">
+                            <span class="legenda-item"><i class="bolinha entradas"></i>Entradas</span>
+                             <span class="legenda-item"><i class="bolinha saidas"></i>Saídas</span>
+                        </div>
+                    </div>
+
+                    <div class="area-grafico">
+                        <canvas id="graficoComparativo"></canvas>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+        </main>
+
+    </div>
+    
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script> lucide.createIcons(); </script>
+    <script src="../src/assets/js/relatorios.js"></script>
+</body>
+</html>
